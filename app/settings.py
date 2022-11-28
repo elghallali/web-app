@@ -16,12 +16,6 @@ from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
 
 
-env = environ.Env()
-
-# read th .env file
-environ.Env.read_env()
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -58,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tasks',
+    'tasks'
 ]
 
 MIDDLEWARE = [
